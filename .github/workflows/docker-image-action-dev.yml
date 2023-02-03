@@ -38,3 +38,6 @@ jobs:
           context: .
           push: true
           tags: xia1997x/ee20c-lia-dev:${{ secrets.GROUP_NAME }}-dev
+      -
+        name: Webhook for the docker redeployment
+        run: curl -x POST "${{ secrets.WEBHOOK }}"
